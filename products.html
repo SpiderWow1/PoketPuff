@@ -6,15 +6,9 @@
   <title>Shop | PoketPuff</title>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600&display=swap" rel="stylesheet">
   <style>
-    html, body {
-      height: 100%;
+    body {
       margin: 0;
       font-family: 'Outfit', sans-serif;
-      display: flex;
-      flex-direction: column;
-    }
-    body {
-      flex: 1;
       background: url('background-shop.png') no-repeat center center fixed;
       background-size: cover;
       color: #fff;
@@ -33,9 +27,6 @@
       margin-left: 1.5rem;
       font-weight: 600;
     }
-    main {
-      flex: 1;
-    }
     h1 {
       text-align: center;
       margin: 2rem 0 1rem;
@@ -50,39 +41,27 @@
     }
     .product {
       background-color: white;
-      border: 1px solid #eee;
       border-radius: 10px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-      overflow: hidden;
-      transition: transform 0.2s ease, box-shadow 0.3s ease;
-      text-align: center;
       padding: 1rem;
-      color: #000;
+      text-align: center;
+      color: black;
     }
     .product img {
-      width: 100%;
-      max-height: 200px;
-      object-fit: contain;
-      background: #fafafa;
+      max-width: 100%;
+      max-height: 180px;
     }
     .btn {
       background-color: #ff4f5a;
       color: white;
       padding: 0.6rem 1.2rem;
-      text-decoration: none;
+      border: none;
       border-radius: 6px;
       font-weight: bold;
+      cursor: pointer;
       margin-top: 0.8rem;
-      display: inline-block;
     }
     .btn:hover {
       background-color: #e8414f;
-    }
-    footer {
-      background-color: rgba(31, 31, 31, 0.95);
-      color: white;
-      text-align: center;
-      padding: 2rem;
     }
   </style>
 </head>
@@ -97,34 +76,27 @@
     </nav>
   </header>
 
-  <main>
-    <h1>Shop Our Products</h1>
-    <section class="products">
-      <div class="product">
-        <img src="https://placehold.co/300x200?text=Free+Sample+1" alt="Sample 1">
-        <h3>Free Sample Vape 1</h3>
-        <p>£0.00</p>
-        <button class="btn" onclick="addToCart('Free Sample Vape 1', '0.00')">Add to Cart</button>
-      </div>
-      <div class="product">
-        <img src="https://placehold.co/300x200?text=Free+Sample+2" alt="Sample 2">
-        <h3>Free Sample Vape 2</h3>
-        <p>£0.00</p>
-        <button class="btn" onclick="addToCart('Free Sample Vape 2', '0.00')">Add to Cart</button>
-      </div>
-      <div class="product">
-        <img src="https://placehold.co/300x200?text=Free+Sample+3" alt="Sample 3">
-        <h3>Free Sample Vape 3</h3>
-        <p>£0.00</p>
-        <button class="btn" onclick="addToCart('Free Sample Vape 3', '0.00')">Add to Cart</button>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <p>&copy; 2025 PoketPuff. All rights reserved.</p>
-    <p>18+ Only | Nicotine is an addictive substance</p>
-  </footer>
+  <h1>Shop Our Products</h1>
+  <section class="products">
+    <div class="product">
+      <img src="https://placehold.co/300x200?text=Sample+1" alt="Product 1">
+      <h3>Sample Vape 1</h3>
+      <p>£0.00</p>
+      <button class="btn" onclick="addToCart('Sample Vape 1', '0.00')">Add to Cart</button>
+    </div>
+    <div class="product">
+      <img src="https://placehold.co/300x200?text=Sample+2" alt="Product 2">
+      <h3>Sample Vape 2</h3>
+      <p>£0.00</p>
+      <button class="btn" onclick="addToCart('Sample Vape 2', '0.00')">Add to Cart</button>
+    </div>
+    <div class="product">
+      <img src="https://placehold.co/300x200?text=Sample+3" alt="Product 3">
+      <h3>Sample Vape 3</h3>
+      <p>£0.00</p>
+      <button class="btn" onclick="addToCart('Sample Vape 3', '0.00')">Add to Cart</button>
+    </div>
+  </section>
 
   <script>
     function addToCart(name, price) {
