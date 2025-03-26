@@ -127,8 +127,8 @@
     renderCart();
   </script>
 
-  <!-- PayPal SDK -->
-  <script src="https://www.paypal.com/sdk/js?client-id=AVL9d9nGPB-8XWIY9wkHpeD-jt8oIyr8idAtg-ZLQ5iZd3N8WQjEZeiIa0TI_2xFZcm_2fLLb5rp1gPu&currency=GBP"></script>
+  <!-- PayPal SDK (Sandbox) -->
+  <script src="https://www.paypal.com/sdk/js?client-id=sb-ltz5d7702482@business.example.com&currency=GBP"></script>
   <script>
     const totalAmount = cart.reduce((sum, item) => sum + parseFloat(item.price), 0).toFixed(2);
 
