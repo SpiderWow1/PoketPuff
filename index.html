@@ -22,7 +22,7 @@
       position: relative;
     }
 
-    /* Vapor Effect - thicker + blurrier */
+    /* Vapor Club Effect */
     .vapor {
       position: absolute;
       top: 0;
@@ -36,25 +36,25 @@
     .vapor span {
       position: absolute;
       display: block;
-      width: 120px;
-      height: 120px;
-      background: rgba(255,255,255,0.07);
+      width: 200px;
+      height: 200px;
+      background: rgba(255,255,255,0.08);
       border-radius: 50%;
-      filter: blur(12px);
-      animation: float 25s linear infinite;
+      filter: blur(30px);
+      animation: float 40s ease-in-out infinite;
     }
 
-    /* Different positions and timings */
-    .vapor span:nth-child(1) { left: 5%; animation-delay: 0s; animation-duration: 30s; }
-    .vapor span:nth-child(2) { left: 20%; animation-delay: 3s; animation-duration: 26s; }
-    .vapor span:nth-child(3) { left: 35%; animation-delay: 6s; animation-duration: 22s; }
-    .vapor span:nth-child(4) { left: 50%; animation-delay: 2s; animation-duration: 28s; }
-    .vapor span:nth-child(5) { left: 65%; animation-delay: 4s; animation-duration: 24s; }
-    .vapor span:nth-child(6) { left: 80%; animation-delay: 1s; animation-duration: 30s; }
-    .vapor span:nth-child(7) { left: 90%; animation-delay: 5s; animation-duration: 34s; }
-    .vapor span:nth-child(8) { left: 10%; animation-delay: 7s; animation-duration: 32s; }
-    .vapor span:nth-child(9) { left: 40%; animation-delay: 2s; animation-duration: 29s; }
-    .vapor span:nth-child(10) { left: 70%; animation-delay: 6s; animation-duration: 31s; }
+    /* Generate more vapor clouds */
+    .vapor span:nth-child(1) { left: 5%; animation-delay: 0s; animation-duration: 60s; }
+    .vapor span:nth-child(2) { left: 15%; animation-delay: 5s; animation-duration: 55s; }
+    .vapor span:nth-child(3) { left: 30%; animation-delay: 10s; animation-duration: 65s; }
+    .vapor span:nth-child(4) { left: 45%; animation-delay: 3s; animation-duration: 58s; }
+    .vapor span:nth-child(5) { left: 60%; animation-delay: 6s; animation-duration: 62s; }
+    .vapor span:nth-child(6) { left: 75%; animation-delay: 8s; animation-duration: 68s; }
+    .vapor span:nth-child(7) { left: 90%; animation-delay: 2s; animation-duration: 59s; }
+    .vapor span:nth-child(8) { left: 25%; animation-delay: 4s; animation-duration: 64s; }
+    .vapor span:nth-child(9) { left: 50%; animation-delay: 9s; animation-duration: 70s; }
+    .vapor span:nth-child(10) { left: 80%; animation-delay: 7s; animation-duration: 66s; }
 
     @keyframes float {
       0% {
@@ -62,11 +62,14 @@
         transform: translateX(0) scale(1);
         opacity: 0;
       }
-      25% { opacity: 0.3; }
-      50% { transform: translateX(-30px) scale(1.3); opacity: 0.25; }
+      20% { opacity: 0.4; }
+      50% {
+        transform: translateX(-50px) scale(1.2);
+        opacity: 0.5;
+      }
       100% {
         bottom: 120%;
-        transform: translateX(30px) scale(1.6);
+        transform: translateX(60px) scale(1.8);
         opacity: 0;
       }
     }
@@ -103,15 +106,15 @@
     .hero h1 {
       font-size: 3.5rem;
       margin-bottom: 1rem;
-      text-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
-      filter: blur(0.2px);
+      text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+      filter: blur(0.5px);
     }
     .hero p {
       font-size: 1.4rem;
       margin-bottom: 2rem;
       color: #ddd;
-      text-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
-      filter: blur(0.2px);
+      text-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+      filter: blur(0.4px);
     }
     .btn {
       background-color: #ff4f5a;
@@ -121,13 +124,13 @@
       border-radius: 8px;
       font-weight: 600;
       font-size: 1.1rem;
-      box-shadow: 0 0 12px rgba(0,0,0,0.2);
+      box-shadow: 0 0 12px rgba(0,0,0,0.3);
       transition: all 0.3s ease;
     }
     .btn:hover {
       background-color: #e8414f;
       transform: scale(1.05);
-      box-shadow: 0 0 20px rgba(255, 79, 90, 0.5);
+      box-shadow: 0 0 20px rgba(255, 79, 90, 0.6);
     }
     footer {
       background-color: rgba(31, 31, 31, 0.95);
