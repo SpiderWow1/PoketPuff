@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Shop | PoketPuff</title>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600&display=swap" rel="stylesheet">
@@ -9,11 +9,12 @@
     body {
       margin: 0;
       font-family: 'Outfit', sans-serif;
-      background-color: #f9f9f9;
-      color: #333;
+      background: url('https://images.unsplash.com/photo-1610950039510-4fdc1a011e7b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80') no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
     }
     header {
-      background-color: #1f1f1f;
+      background-color: rgba(31, 31, 31, 0.95);
       color: white;
       padding: 1rem 2rem;
       display: flex;
@@ -39,7 +40,7 @@
       margin: 0 auto;
     }
     .product {
-      background-color: #fff;
+      background-color: white;
       border: 1px solid #eee;
       border-radius: 10px;
       box-shadow: 0 2px 6px rgba(0,0,0,0.05);
@@ -47,6 +48,7 @@
       transition: transform 0.2s ease, box-shadow 0.3s ease;
       text-align: center;
       padding: 1rem;
+      color: #000;
     }
     .product img {
       width: 100%;
@@ -66,6 +68,13 @@
     }
     .btn:hover {
       background-color: #e8414f;
+    }
+    footer {
+      background-color: rgba(31, 31, 31, 0.95);
+      color: white;
+      text-align: center;
+      padding: 2rem;
+      margin-top: 3rem;
     }
   </style>
 </head>
@@ -101,6 +110,11 @@
       <button class="btn" onclick="addToCart('Free Sample Vape 3', '0.00')">Add to Cart</button>
     </div>
   </section>
+
+  <footer>
+    <p>&copy; 2025 PoketPuff. All rights reserved.</p>
+    <p>18+ Only | Nicotine is an addictive substance</p>
+  </footer>
 
   <script>
     function addToCart(name, price) {
