@@ -1,28 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cart | PoketPuff</title>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600&display=swap" rel="stylesheet">
   <style>
-    html, body {
-      height: 100%;
+    body {
       margin: 0;
       font-family: 'Outfit', sans-serif;
-      display: flex;
-      flex-direction: column;
-    }
-    body {
-      flex: 1;
       background: url('background-shop.png') no-repeat center center fixed;
       background-size: cover;
       color: #fff;
-      padding: 0;
     }
     header {
       background-color: rgba(31, 31, 31, 0.95);
-      color: white;
       padding: 1rem 2rem;
       display: flex;
       justify-content: space-between;
@@ -34,54 +26,40 @@
       margin-left: 1.5rem;
       font-weight: 600;
     }
-    main {
-      flex: 1;
-      padding: 2rem;
-    }
     h1 {
       text-align: center;
-      margin: 2rem 0 1rem;
+      margin-top: 2rem;
     }
     .cart {
       max-width: 800px;
-      margin: 0 auto;
+      margin: 2rem auto;
       background: white;
       padding: 2rem;
       border-radius: 10px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-      color: #000;
+      color: black;
     }
     .cart-item {
       display: flex;
       justify-content: space-between;
       margin-bottom: 1rem;
     }
-    .cart-item p {
-      margin: 0.3rem 0;
-    }
     .total {
       text-align: right;
-      font-size: 1.2rem;
       font-weight: bold;
       margin-top: 2rem;
+      font-size: 1.2rem;
     }
     button {
-      padding: 0.6rem 1.2rem;
       background-color: #ff4f5a;
       color: white;
       border: none;
       border-radius: 6px;
+      padding: 0.4rem 1rem;
       font-weight: bold;
       cursor: pointer;
     }
     button:hover {
       background-color: #e8414f;
-    }
-    footer {
-      background-color: rgba(31, 31, 31, 0.95);
-      color: white;
-      text-align: center;
-      padding: 2rem;
     }
   </style>
 </head>
@@ -96,17 +74,10 @@
     </nav>
   </header>
 
-  <main>
-    <h1>Your Shopping Cart</h1>
-    <div class="cart" id="cartContainer">
-      <p>Your cart is empty.</p>
-    </div>
-  </main>
-
-  <footer>
-    <p>&copy; 2025 PoketPuff. All rights reserved.</p>
-    <p>18+ Only | Nicotine is an addictive substance</p>
-  </footer>
+  <h1>Your Shopping Cart</h1>
+  <div class="cart" id="cartContainer">
+    <p>Loading cart...</p>
+  </div>
 
   <script>
     const cartContainer = document.getElementById('cartContainer');
@@ -120,13 +91,14 @@
 
       cartContainer.innerHTML = '';
       let total = 0;
+
       cart.forEach(item => {
         total += parseFloat(item.price);
         const div = document.createElement('div');
-        div.classList.add('cart-item');
+        div.className = 'cart-item';
         div.innerHTML = `
           <div>
-            <p><strong>${item.name}</strong></p>
+            <strong>${item.name}</strong>
             <p>£${item.price}</p>
           </div>
           <button onclick="removeFromCart('${item.name}')">Remove</button>
@@ -135,8 +107,8 @@
       });
 
       const totalDiv = document.createElement('div');
-      totalDiv.classList.add('total');
-      totalDiv.textContent = \`Total: £\${total.toFixed(2)}\`;
+      totalDiv.className = 'total';
+      totalDiv.textContent = `Total: £${total.toFixed(2)}`;
       cartContainer.appendChild(totalDiv);
     }
 
