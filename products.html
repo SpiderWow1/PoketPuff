@@ -6,9 +6,15 @@
   <title>Shop | PoketPuff</title>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600&display=swap" rel="stylesheet">
   <style>
-    body {
+    html, body {
+      height: 100%;
       margin: 0;
       font-family: 'Outfit', sans-serif;
+      display: flex;
+      flex-direction: column;
+    }
+    body {
+      flex: 1;
       background: url('background-shop.png') no-repeat center center fixed;
       background-size: cover;
       color: #fff;
@@ -26,6 +32,9 @@
       text-decoration: none;
       margin-left: 1.5rem;
       font-weight: 600;
+    }
+    main {
+      flex: 1;
     }
     h1 {
       text-align: center;
@@ -74,7 +83,6 @@
       color: white;
       text-align: center;
       padding: 2rem;
-      margin-top: 3rem;
     }
   </style>
 </head>
@@ -89,27 +97,29 @@
     </nav>
   </header>
 
-  <h1>Shop Our Products</h1>
-  <section class="products">
-    <div class="product">
-      <img src="https://placehold.co/300x200?text=Free+Sample+1" alt="Sample 1">
-      <h3>Free Sample Vape 1</h3>
-      <p>£0.00</p>
-      <button class="btn" onclick="addToCart('Free Sample Vape 1', '0.00')">Add to Cart</button>
-    </div>
-    <div class="product">
-      <img src="https://placehold.co/300x200?text=Free+Sample+2" alt="Sample 2">
-      <h3>Free Sample Vape 2</h3>
-      <p>£0.00</p>
-      <button class="btn" onclick="addToCart('Free Sample Vape 2', '0.00')">Add to Cart</button>
-    </div>
-    <div class="product">
-      <img src="https://placehold.co/300x200?text=Free+Sample+3" alt="Sample 3">
-      <h3>Free Sample Vape 3</h3>
-      <p>£0.00</p>
-      <button class="btn" onclick="addToCart('Free Sample Vape 3', '0.00')">Add to Cart</button>
-    </div>
-  </section>
+  <main>
+    <h1>Shop Our Products</h1>
+    <section class="products">
+      <div class="product">
+        <img src="https://placehold.co/300x200?text=Free+Sample+1" alt="Sample 1">
+        <h3>Free Sample Vape 1</h3>
+        <p>£0.00</p>
+        <button class="btn" onclick="addToCart('Free Sample Vape 1', '0.00')">Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="https://placehold.co/300x200?text=Free+Sample+2" alt="Sample 2">
+        <h3>Free Sample Vape 2</h3>
+        <p>£0.00</p>
+        <button class="btn" onclick="addToCart('Free Sample Vape 2', '0.00')">Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="https://placehold.co/300x200?text=Free+Sample+3" alt="Sample 3">
+        <h3>Free Sample Vape 3</h3>
+        <p>£0.00</p>
+        <button class="btn" onclick="addToCart('Free Sample Vape 3', '0.00')">Add to Cart</button>
+      </div>
+    </section>
+  </main>
 
   <footer>
     <p>&copy; 2025 PoketPuff. All rights reserved.</p>
